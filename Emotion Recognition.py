@@ -29,4 +29,3 @@ emotions_values = [angry, disgust, fear, happy, sad, surprise, neutral]
 
 score_comparisons = pd.DataFrame(emotions, columns = ['Human Emotions'])
 score_comparisons['Emotion Value from the Video'] = emotions_values
-score_comparisons
