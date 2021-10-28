@@ -2,7 +2,7 @@ import pandas as pd
 from fer import FER
 from fer import Video
 
-location_videofile = r"C:\Users\hwala\Downloads\Rohan.mp4"
+location_videofile = r"D:\MiniProject\Abhishek.mp4"
 
 face_detector = FER(mtcnn=True)
 input_video = Video(location_videofile)
@@ -29,3 +29,4 @@ emotions_values = [angry, disgust, fear, happy, sad, surprise, neutral]
 
 score_comparisons = pd.DataFrame(emotions, columns = ['Human Emotions'])
 score_comparisons['Emotion Value from the Video'] = emotions_values
+
