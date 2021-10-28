@@ -25,6 +25,16 @@ def index():
 def resumeanalyzer_page():
     return render_template("resumeanalyzer.html")
 
+
+@views.route('/resumeanalyzer/', methods=['POST', 'GET'])
+def resumeanalyzer_page():
+    return render_template("resumeanalyzer.html")
+
+
+@views.route('/resumeanalyzer/', methods=['POST', 'GET'])
+def resumeanalyzer_page():
+    return render_template("resumeanalyzer.html")
+
 @views.route('/uploader/', methods=['POST', 'GET'])
 def analyzeResume():
     if request.method == 'POST':

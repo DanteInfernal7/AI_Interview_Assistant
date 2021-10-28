@@ -34,19 +34,19 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html"><b>ASSISTENTIA</b></a></h1>
+      <h1 class="logo"><a href="{{ url_for('views.index') }}"><b>ASSISTENTIA</b></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ url_for('views.index') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Team</a></li>
           <li><a class="nav-link scrollto " href="#pricing">Pricing</a></li>
           <li><a class="nav-link scrollto" href="#team">Blog</a></li>
-          <li class="nav-link scroll to dropdown"><a href="resumeanalyzer.html"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="nav-link scroll to dropdown"><a href="{{ url_for('views.resumeanalyzer_page') }}"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="resumeanalyzer.html">Resume Analyzer</a></li>
-              <li><a href="#contact">Interview Analyzer</a></li>
-              <li><a href="#">Interview Tips</a></li>
+              <li><a href="{{ url_for('views.resumeanalyzer_page') }}">Resume Analyzer</a></li>
+              <li><a href="{{ url_for('views.resumeanalyzer_page') }}">Interview Analyzer</a></li>
+              <li><a href="{{ url_for('views.resumeanalyzer_page') }}">Interview Tips</a></li>
               <!-- <li><a class="nav-link scrollto" href="#faq">FAQ's</a></li> -->
             </ul>
           </li>
@@ -74,7 +74,7 @@
           <form action="{{ url_for('views.analyzeResume') }}" method="post" enctype="multipart/form-data">
             <input type="file" name="resume_file" id="resume_file">
             <input type="submit" name="SubmitBtn" id="SubmitBtn" value="Upload Resume">
-          </form>
+          </form>\
           <!-- ======= Resume Upload Form ends======= -->
 
 
