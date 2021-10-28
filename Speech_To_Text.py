@@ -1,14 +1,10 @@
 import speech_recognition as sr
-
-r = sr.Recognizer()
-
-with sr.AudioFile('Recording.wav') as source:
-    audio_text = r.listen(source)
-
-    try:
-
-        text = r.recognize_google(audio_text)
-        print(text)
-
-    except:
-        print('Couldn\'t process request')
+def speechToText(audioFile):
+    r = sr.Recognizer()
+    with sr.AudioFile('Recording.wav') as source:
+        audio_text = r.listen(source)
+        try:
+            text = r.recognize_google(audio_text)
+            print(text)
+        except:
+            print('Couldn\'t process request')
