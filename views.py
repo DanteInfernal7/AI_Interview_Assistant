@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.datastructures import  FileStorage
 import Resume_Parser
 import ResumeFeedbackCreator
-from flask import Flask, render_template, url_for, request, redirect, Blueprint
+from flask import Flask, render_template, url_for, request, redirect, Blueprint, send_file
 from datetime import datetime
 
 import AudioVideoSplitter
@@ -34,11 +34,13 @@ def analyzeResume():
         name2 = "Name2"
 
         n2 = str(f2)
-        n2 = n2[15:-16]
+        n2 = n2[15:-78]
+        n2 = n2.replace(" ", "_")
         print(n2)
 
         resumeWordCorrections = Resume_Parser.resumeAnalyzer(n2)
         ResumeFeedbackCreator.resumeFeedbackGenerator(name2, resumeWordCorrections)
+        return down(name2)
 
 @views.route('/uploader/', methods=['POST', 'GET'])
 def analyze():
@@ -89,3 +91,10 @@ def analyze():
         score_comparisons.to_csv(name+'.csv', index=False)
 
         videoFeedbackCreator.interviewFeedbackGenerator(name, speechFeedback)
+        return down()
+
+
+@views.route('/down')
+def down(name):
+    path = (name+'.docx')
+    return send_file(path,as_attachment=True)

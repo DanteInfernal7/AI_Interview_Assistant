@@ -59,4 +59,3 @@ def interviewFeedbackGenerator(name, speechFeedback):
 
     document.add_paragraph('Please feel free to check out our blog page for interview tips and tricks!')
     document.save(name+'.docx')
-    convert(name+'.docx')

@@ -5,5 +5,4 @@ def resumeAnalyzer(resumeFile):
     resume = dct.process(resumeFile)
     word_set = set(badWords)
     phrase_set = set(resume.lower().split())
-    resumeWordCorrections = word_set.intersection(phrase_set)
-    return resumeWordCorrections
+    return word_set.intersection(phrase_set)
