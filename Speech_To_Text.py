@@ -5,6 +5,6 @@ def speechToText(audioFile):
         audio_text = r.listen(source)
         try:
             text = r.recognize_google(audio_text)
-            print(text)
+            return text
         except:
             print('Couldn\'t process request')
