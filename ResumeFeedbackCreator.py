@@ -10,7 +10,7 @@ def resumeFeedbackGenerator(name2, resumeFeedback):
     document.add_paragraph('Hello '+name2+', thank you for using Asistentia. Below you will find a complete report of your resume.')
 
     if resumeFeedback is not None:
-        document.add_heading('Speech Analysis', level=1)
+        document.add_heading('Text Analysis', level=1)
         document.add_paragraph('Following are a few words and phrases that we noticed you use in your interview, kindly try to avoid them as they have an adverse impact on your image:')
         for speech in range(1,len(resumeFeedback)):
             document.add_paragraph(resumeFeedback[speech], style='List Bullet')
