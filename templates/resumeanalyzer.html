@@ -65,16 +65,16 @@
     <div class="container-fluid" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Interview Helper</h1>
-          <h2>This is an A.I based Interview Assistant which will help students,freshers,individuals overcome the difficulties they face during interviews.</h2>
+          <h1>Interview Helper </h1>
+          <h2>This is an A.I based Interview Assistant which will help students, freshers, individuals overcome the difficulties they face during interviews.</h2>
           
 
 
           <!-- ======= Resume Upload Form ======= -->
-          <form action="{{ url_for('views.analyzeResume') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ url_for('views.analyze') }}" method="post" enctype="multipart/form-data">
             <input type="file" name="resume_file" id="resume_file">
-            <input type="submit" name="SubmitBtn" id="SubmitBtn" value="Upload Resume">
-          </form>\
+            <input type="submit" name="SubmitBtn" id="SubmitBtn" value="Upload Video">
+          </form>
           <!-- ======= Resume Upload Form ends======= -->
 
 
@@ -95,14 +95,14 @@
 
         <div class="section-title">
           <h2>Resume Analyzer</h2>
-          <p>This is an A.I based Interview Assistant which will help students,freshers,individuals overcome the difficulties they face during interviews.</p>
+          <p>This is an A.I based Interview Assistant which will help students, freshers, individuals overcome the difficulties they face during interviews.</p>
         </div>
 
        
           <div class="col-lg-6">
-            <form action="{{ url_for('views.analyze') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ url_for('views.analyzeResume') }}" method="post" enctype="multipart/form-data">
               <input type="file" name="resume" id="resume">
-              <input type="submit" name="SubmitBtn" id="SubmitBtn" value="Upload Video">
+              <input type="submit" name="SubmitBtn" id="SubmitBtn" value="Upload Resume">
             </form>
           </div>
 

@@ -28,7 +28,7 @@ def resumeanalyzer_page():
 @views.route('/uploader2/', methods=['POST', 'GET'])
 def analyzeResume():
     if request.method == 'POST':
-        f2 = request.files['resume_file']
+        f2 = request.files['resume']
         f2.save(secure_filename(f2.filename))
     
         name2 = "Name2"
@@ -46,7 +46,7 @@ def analyzeResume():
 def analyze():
  
     if request.method == 'POST':
-        f = request.files['resume']
+        f = request.files['resume_file']
         f.save(secure_filename(f.filename))
 
         name = "Name"
