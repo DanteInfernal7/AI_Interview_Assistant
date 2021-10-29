@@ -465,7 +465,15 @@ h1, h2, h3, h4, h5, h6 {
 # resume upload
 --------------------------------------------------------------*/
 #SubmitBtn{
- 
+  background-color:#341948;
+  color: #fff;
+  font-size: 16px;
+}
+#resume_file{
+  background-color:#341948;
+  color: #fff;
+  font-size: 16px;
+
 }
 
 /*--------------------------------------------------------------
