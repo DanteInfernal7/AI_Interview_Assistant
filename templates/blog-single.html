@@ -10,22 +10,22 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ url_for('static', filename='assets/img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="blog-single.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='blog-single.css')}}" rel="stylesheet">
 
 </head>
 
@@ -39,12 +39,12 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html"><b>Home</b></a></li>
-          <li><a class="nav-link scrollto" href="index.html"><b>About</b></a></li>
-          <li><a class="nav-link scrollto" href="index.html"><b>Services</b></a></li>
-          <li><a class="nav-link scrollto" href="index.html"><b>Team</b></a></li>
-          <li><a class="active" href="blog.html"><b>Blog</b></a></li>
-          <li><a class="nav-link scrollto" href="index.html"><b>Contact</b></a></li>
+          <li><a class="nav-link scrollto " href="{{ url_for('views.index') }}"><b>Home</b></a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('views.index') }}"><b>About</b></a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('views.resumeanalyzer_page') }}"><b>Services</b></a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('views.index') }}"><b>Team</b></a></li>
+          <li><a class="active" href="{{ url_for('views.blog') }}"><b>Blog</b></a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('views.index') }}"><b>Contact</b></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -59,11 +59,11 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li>Blog Single</li>
+          <li><a href="{{ url_for('views.index') }}">Home</a></li>
+          <li><a href="{{ url_for('views.blog') }}">Blog</a></li>
+          <li>Assistentia Blog</li>
         </ol>
-        <h2>Blog Single</h2>
+        <h2>Assistentia Blog</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -79,58 +79,52 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                <img src="{{ url_for('static', filename='assets/img/blog/blog-1.jpg')}}" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                <a href="{{ url_for('views.blog') }}">Welcome to Assistentia an A.I Interview Assistant</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ url_for('views.blog') }}">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ url_for('views.blog') }}"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{ url_for('views.blog') }}">12 Comments</a></li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                  An interviewer may ask how you perceive his company's position in its industry, who the firm's competitors are, what its competitive advantages are, and how it should best go forward. For this reason, avoid trying to thoroughly research a dozen different industries. Focus your job search on just a few industries instead.
                 </p>
 
                 <p>
-                  Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
+                  From researching the company to handling certain key interview questions, make sure you make a great impression and ace your next job interview by following these 20 tips.
                 </p>
 
                 <blockquote>
                   <p>
-                    Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
+                    Want to ace your next interview and land that open job you've been seeking? Here are 20 tips to help you prepare.
                   </p>
                 </blockquote>
 
                 <p>
-                  Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
-                  Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis neque.
-                  Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
+                  Prepare to go into every interview with three to five key selling points in mind, such as what makes you the best candidate for the position. Have an example of each selling point prepared ("I have good communication skills. For example, I persuaded an entire group to ..."). And be prepared to tell the interviewer why you want that job – including what interests you about it, what rewards it offers that you find valuable, and what abilities it requires that you possess. If an interviewer doesn't think you're really, really interested in the job, he or she won't give you an offer – no matter how good you are!
                 </p>
 
-                <h3>Et quae iure vel ut odit alias.</h3>
+                <h3>Interview Assistance</h3>
                 <p>
-                  Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid qui.
-                  Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur quidem ea.
-                  Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                  There are always more candidates for positions than there are openings. So interviewers look for ways to screen people out. Put yourself in their shoes and ask yourself why they might not want to hire you (“I don't have this,” “I'm not that,” etc.). Then prepare your defense: “I know you may be thinking that I might not be the best fit for this position because [their reservation]. But you should know that [reason the interviewer shouldn't be overly concerned]."
                 </p>
-                <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
+                <img src="{{ url_for('static', filename='assets/img/blog/blog-inside-post.jpg')}}" class="img-fluid" alt="">
 
-                <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
+                <h3>Prepare for common interview questions.Anticipate the interviewer's concerns and reservations.</h3>
                 <p>
-                  Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
-                  Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam vitae.
+                  Every "how to interview" book has a list of a hundred or more "common interview questions." (You might wonder just how long those interviews are if there are that many common questions!) So how do you prepare? Pick any list and think about which questions you're most likely to encounter, given your age and status (about to graduate, looking for a summer internship). Then prepare your answers so you won't have to fumble for them during the actual interview.
                 </p>
                 <p>
-                  Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                  Come to the interview with some intelligent questions for the interviewer that demonstrate your knowledge of the company as well as your serious intent. Interviewers always ask if you have any questions, and no matter what, you should have one or two ready. If you say, "No, not really," he or she may conclude that you're not all that interested in the job or the company. A good all-purpose question is, "If you could design the ideal candidate for this position from the ground up, what would he or she be like?"
                 </p>
 
               </div>
@@ -152,7 +146,7 @@
             </article><!-- End blog entry -->
 
             <div class="blog-author d-flex align-items-center">
-              <img src="assets/img/blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+              <img src="{{ url_for('static', filename='assets/img/blog/blog-author.jpg')}}" class="rounded-circle float-left" alt="">
               <div>
                 <h4>Jane Smith</h4>
                 <div class="social-links">
@@ -161,7 +155,7 @@
                   <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
                 </div>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+                  If you're having a series of interviews with the same company, you can use some of your prepared questions with each person you meet (for example, "What do you think is the best thing about working here?" and "What kind of person would you most like to see fill this position?") Then, try to think of one or two others during each interview itself.
                 </p>
               </div>
             </div><!-- End blog author bio -->
@@ -172,13 +166,12 @@
 
               <div id="comment-1" class="comment">
                 <div class="d-flex">
-                  <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div>
+                  <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-1.jpg')}}" alt=""></div>
                   <div>
                     <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan, 2020</time>
                     <p>
-                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
-                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                      It's one thing to come prepared with a mental answer to a question like, "Why should we hire you?" It's another challenge entirely to say it out loud in a confident and convincing way. The first time you try it, you'll sound garbled and confused, no matter how clear your thoughts are in your own mind! Do it another 10 times, and you'll sound a lot smoother and more articulate.
                     </p>
                   </div>
                 </div>
@@ -186,40 +179,36 @@
 
               <div id="comment-2" class="comment">
                 <div class="d-flex">
-                  <div class="comment-img"><img src="assets/img/blog/comments-2.jpg" alt=""></div>
+                  <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-2.jpg')}}" alt=""></div>
                   <div>
                     <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan, 2020</time>
                     <p>
-                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                      Also, start off with a positive comment about the company – something like, "I've really been looking forward to this meeting [not "interview"]. I think [the company] is doing great work in [a particular field or project], and I'm really excited by the prospect of being able to contribute."
                     </p>
                   </div>
                 </div>
 
                 <div id="comment-reply-1" class="comment comment-reply">
                   <div class="d-flex">
-                    <div class="comment-img"><img src="assets/img/blog/comments-3.jpg" alt=""></div>
+                    <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-3.jpg')}}" alt=""></div>
                     <div>
                       <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                       <time datetime="2020-01-01">01 Jan, 2020</time>
                       <p>
-                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
-
-                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
-
-                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                        Some studies indicate that interviewers make up their minds about candidates in the first five minutes of the interview – and then spend the rest of the interview looking for things to confirm that decision! So what can you do in those five minutes to get through the gate? Come in with energy and enthusiasm, and express your appreciation for the interviewer's time. (Remember: She may be seeing a lot of other candidates that day and may be tired from the flight in. So bring in that energy!)
                       </p>
                     </div>
                   </div>
 
                   <div id="comment-reply-2" class="comment comment-reply">
                     <div class="d-flex">
-                      <div class="comment-img"><img src="assets/img/blog/comments-4.jpg" alt=""></div>
+                      <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-4.jpg')}}" alt=""></div>
                       <div>
                         <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                         <time datetime="2020-01-01">01 Jan, 2020</time>
                         <p>
-                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                          Many interviewers view job interviews as adversarial: Candidates are going to try to pry an offer out of the interviewer, and the interviewer's job is to hold onto it. Your job is to transform this "tug of war" into a relationship in which you're both on the same side. You could say something as simple as, "I'm happy to have the chance to learn more about your company and to let you learn more about me, so we can see if this is going to be a good match or not. I always think that the worst thing that can happen is to be hired into a job that's wrong for you – then nobody's happy!"
                         </p>
                       </div>
                     </div>
@@ -232,13 +221,12 @@
 
               <div id="comment-3" class="comment">
                 <div class="d-flex">
-                  <div class="comment-img"><img src="assets/img/blog/comments-5.jpg" alt=""></div>
+                  <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-5.jpg')}}" alt=""></div>
                   <div>
                     <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan, 2020</time>
                     <p>
-                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
-                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                      Perhaps out of the effort to be polite, some usually assertive candidates become overly passive during job interviews. But politeness doesn't equal passivity. An interview is like any other conversation – it’s a dance in which you and a partner move together, both responding to the other. Don't make the mistake of just sitting there waiting for the interviewer to ask you about that Nobel Prize you won. It's your responsibility to make sure he walks away knowing your key selling points.
                     </p>
                   </div>
                 </div>
@@ -247,46 +235,19 @@
 
               <div id="comment-4" class="comment">
                 <div class="d-flex">
-                  <div class="comment-img"><img src="assets/img/blog/comments-6.jpg" alt=""></div>
+                  <div class="comment-img"><img src="{{ url_for('static', filename='assets/img/blog/comments-6.jpg')}}" alt=""></div>
                   <div>
                     <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan, 2020</time>
                     <p>
-                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                      Interview questions about your race, age, gender, religion, marital status, and sexual orientation are inappropriate and in many areas illegal. Nevertheless, you may get one or more of them. If you do, you have a couple of options. You can simply answer with a question ("I'm not sure how that's relevant to my application"), or you can try to answer "the question behind the question": "I don't know whether I'll decide to have children in the near future, but if you're wondering if I'll be leaving my job for an extended period of time, I can say that I'm very committed to my career and frankly can't imagine giving it up."
                     </p>
                   </div>
                 </div>
 
               </div><!-- End comment #4 -->
 
-              <div class="reply-form">
-                <h4>Leave a Reply</h4>
-                <p>Your email address will not be published. Required fields are marked * </p>
-                <form action="">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <input name="website" type="text" class="form-control" placeholder="Your Website">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col form-group">
-                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Post Comment</button>
-
-                </form>
-
-              </div>
-
+              
             </div><!-- End blog comments -->
 
           </div><!-- End blog entries list -->
@@ -318,31 +279,31 @@
               <h3 class="sidebar-title">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
                 <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-1.jpg" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/blog/blog-recent-1.jpg')}}" alt="">
                   <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-2.jpg" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/blog/blog-recent-2.jpg')}}" alt="">
                   <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-3.jpg" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/blog/blog-recent-3.jpg')}}" alt="">
                   <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-4.jpg" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/blog/blog-recent-4.jpg')}}" alt="">
                   <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-5.jpg" alt="">
+                  <img src="{{ url_for('static', filename='assets/img/blog/blog-recent-5.jpg')}}" alt="">
                   <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
@@ -385,7 +346,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Tempo</h3>
+            <h3>ASSISTENTIA</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -398,11 +359,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('views.login') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('views.login') }}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('views.login') }}">Services</a></li>
             </ul>
           </div>
 
@@ -433,13 +392,10 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Tempo</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Assistentia</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+          
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
@@ -456,14 +412,14 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
 
 </body>
 
