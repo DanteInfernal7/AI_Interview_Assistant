@@ -34,10 +34,10 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html"><b>ASSISTENTIA</b></a></h1>
+      <h1 class="logo"><a href="{{ url_for('views.index') }}"><b>ASSISTENTIA</b></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ url_for('views.index') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li class="nav-link scrollto dropdown"><a href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -96,7 +96,7 @@
               <li><i class="bi bi-check-circle"></i> The app is designed for both professional interviews, as well as students and education staff.</li>
               <li><i class="bi bi-check-circle"></i> Interview Assistant makes it easy to prepare for and conduct the actual mock interviews.</li>
             </ul>
-            <a href="blog.html" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+            <a href="{{ url_for('views.blog') }}" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
 
@@ -121,7 +121,7 @@
                 </svg>
                 <i class="bx bx-file"></i>
               </div>
-              <h4><a href="resumeanalyzer.html">Resume Analyzer</a></h4>
+              <h4><a href="{{ url_for('views.resumeanalyzer_page') }}">Resume Analyzer</a></h4>
               <p><b>Upload your resume, which will be analyzed and a report will be generated based on the corrections needed.</b></p>
             </div>
           </div>
